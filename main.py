@@ -2,6 +2,7 @@ import PySimpleGUI as sg
 import requests as rq
 import json
 import time
+sg.theme('Dark')
 
 
 def main():

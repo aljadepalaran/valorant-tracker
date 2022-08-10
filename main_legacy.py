@@ -14,7 +14,8 @@ screen_height = root.winfo_screenheight()
 size_scale = .5
 # make window with the scaled size
 root.geometry(f"{int(screen_width * size_scale)}x{int(screen_height * size_scale)}")
-root.configure(background='grey')
+bgcolour ='grey'
+root.configure(background=bgcolour)
 
 
 def draw_interface():  # create labels and entries
@@ -31,7 +32,6 @@ def draw_interface():  # create labels and entries
     status_entry.place(x=75, y=60, height=20)
 
     def button_command():  # load button command
-        ttk.Label(root, text=f"test").pack()
         get_user_information(name_entry.get(), tag_entry.get())
 
     def update_status(error_code):  # updates the box with the status error from getting the information
@@ -70,32 +70,16 @@ def refresh_data():
     draw_interface()
 
 
-def parse_data(user_data):  # reformats the received data and displays to the user
-    count = 0  # used to change the row in which the text is placed
+def parse_data(user_data):  # reformat the received data and display to the user
     parsed_data = json.loads(user_data.content)
     for key in parsed_data['data']:
-
         if key == 'card':
-            # ttk.Label(root, text="Profile Picture:").pack()
-            # ttk.Label(root, text="Profile Picture:").pack()
-            # ttk.Label(frm, text=f"Profile Picture:").grid(column=0, row=count)
-            # ttk.Label(frm, text=f"{parsed_data['data'][key]['small']}").grid(column=1, row=count)
-            # count += 1
-
-            # ttk.Label(root, text="Profile Picture:").pack()
-            # ttk.Label(root, text="Profile Picture:").pack()
-            # ttk.Label(frm, text=f"Banner:").grid(column=0, row=count)
-            # ttk.Label(frm, text=f"{parsed_data['data'][key]['large']}").grid(column=1, row=count)
-            # count += 1
-
-            # ttk.Label(root, text="Profile Picture:").pack()
-            # ttk.Label(root, text="Profile Picture:").pack()
-            # ttk.Label(frm, text=f"In-game Banner:").grid(column=0, row=count)
-            # ttk.Label(frm, text=f"{parsed_data['data'][key]['wide']}").grid(column=1, row=count)
+            ttk.Label(root, text=f"Profile Picture: {parsed_data['data'][key]['small']}").pack()
+            ttk.Label(root, text=f"Banner: {parsed_data['data'][key]['large']}").pack()
+            ttk.Label(root, text=f"In-game Banner: {parsed_data['data'][key]['wide']}").pack()
             continue
         else:
             ttk.Label(root, text=f"{key.capitalize()}: {parsed_data['data'][key]}").pack()
-        count += 1
 
 
 draw_interface()  # have to draw the interface for the first time

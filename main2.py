@@ -2,6 +2,8 @@ import requests as rq
 import json
 from tkinter import *
 from tkinter import ttk
+import numpy as np
+import PySimpleGUI as sg
 
 root = Tk()
 screen_width = root.winfo_screenwidth()

@@ -1,13 +1,14 @@
 import PySimpleGUI as sg
 import requests as rq
 import json
+import time
 
 
 def main():
     layout = [[sg.Text("Name"), sg.Input(key='-NAME-')],
               [sg.Text("Tag"), sg.Input(key='-TAG-')],
               [sg.Multiline(default_text="Awaiting input.", key='-MULTI-', size=(50, 10))],
-              [sg.Button('Load', pad=(250,50))],
+              [sg.Button('Load', pad=(250, 50))],
               [sg.Text(size=(40, 1), key='-OUTPUT-')]]
 
     window = sg.Window('Valorant Tracker', layout)
@@ -15,8 +16,10 @@ def main():
     def get_user_information(_name, _tagline):  # requests the information from the website with appropriate name/tag
         try:
             request_url = f"https://api.henrikdev.xyz/valorant/v1/account/{_name}/{_tagline}"
+            time_then = time.time()
             user_data = rq.get(request_url, timeout=1)
-
+            time_now = time.time()
+            print(f"Time taken for request= {round(time_now-time_then, 2)}s.")
             print(f"GET {request_url}")
 
             if user_data.ok:
@@ -33,7 +36,6 @@ def main():
         event, values = window.read()
 
         if event == 'Load':
-            print('You clicked load.')
             get_user_information(values['-NAME-'], values['-TAG-'])  # check the boxes for information
         elif event == sg.WINDOW_CLOSED:
             break
@@ -56,5 +58,6 @@ def parse_data(user_data):  # reformat the received data and return a large text
         else:
             big_text += f"{key.capitalize()}: {parsed_data['data'][key]}\n"
     return big_text, image_links
+
 
 main()

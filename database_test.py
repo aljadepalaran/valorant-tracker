@@ -14,5 +14,5 @@ try:
                 image_wide_url='SEED-image-wide-1',
                 name="SEED-name-1",
                 tag="SEED-tag-1")
-except IntegrityError:
-    print('Something wrong')
+except IntegrityError:  # this error indicates the username is already in the database
+    print('Username has already been used.')

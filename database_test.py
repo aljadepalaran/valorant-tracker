@@ -1,5 +1,6 @@
 from models.user import User
 from peewee import *
+import time
 
 db = SqliteDatabase('main.db')  # define which db to use
 db.connect()  # connect to the db
@@ -13,6 +14,7 @@ try:
                 image_large_url='SEED-image-large-1',
                 image_wide_url='SEED-image-wide-1',
                 name="SEED-name-1",
-                tag="SEED-tag-1")
+                tag="SEED-tag-1",
+                time_last_updated_unix=time.time())
 except IntegrityError:
     print('Something wrong')

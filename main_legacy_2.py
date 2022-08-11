@@ -45,7 +45,7 @@ def main():
     while True:
         event, values = window.read()
 
-        if event == 'Load':
+        if event == 'Search':
             get_user_information(values['-NAME-'], values['-TAG-'])  # check the boxes for information
         elif event == sg.WINDOW_CLOSED:
             break

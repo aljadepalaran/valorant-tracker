@@ -1,4 +1,5 @@
 from peewee import *
+import time
 db = SqliteDatabase('main.db')
 
 
@@ -15,3 +16,6 @@ class User(Model):
 
     class Meta:
         database = db
+
+    def should_update_from_api(self):
+        return self.time_last_updated_unix + 300 < time.time()

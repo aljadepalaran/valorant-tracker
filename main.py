@@ -25,5 +25,19 @@ while True:
     event, values = window.read()
     if event == 'Exit' or event == sg.WINDOW_CLOSED:
         break
-    elif event == 'Load':
-        print('It works')
+    elif event == 'Search':
+        user = get_user_from_database()
+        if user == None:
+            user = fetch_user_data_from_api()
+            if check_puuid():  # if puuid exists in database / user updated
+                update_user(user)
+                display_data()
+            else:
+                add_user_to_database(user)
+        else:
+            should_update = User.should_update_from_api()
+            if should_update:
+                user = fetch_user_data_from_api()
+                update_user(user)
+            display_data()
+

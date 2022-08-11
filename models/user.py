@@ -11,6 +11,7 @@ class User(Model):
     image_wide_url = CharField()
     name = CharField()
     tag = CharField()
+    time_last_updated_unix = IntegerField()
 
     class Meta:
         database = db

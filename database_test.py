@@ -1,7 +1,5 @@
-from class_definitions import User, execute
+from models.user import User
 from peewee import *
-
-execute()  # creates classes and database
 
 User.create(puuid="test",
             region="eu",

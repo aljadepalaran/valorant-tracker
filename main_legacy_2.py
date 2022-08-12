@@ -77,4 +77,6 @@ def get_image(_url):
         return the_image
     except rq.exceptions.ReadTimeout:
         sg.Popup("Connection timed out when downloading image.")  # inform user the connection timed out
+
+
 main()

@@ -29,8 +29,12 @@ def check_puuid():
     return None
 
 
-def get_user_from_database():
-    return None
+def get_user_from_database(name_, tag_):
+    try:
+        return User.get(User.name == name_ and User.tag == tag_)
+    except:
+        print("Unable to retrieve user from the database.")
+        return None
 
 
 def fetch_user_data_from_api():

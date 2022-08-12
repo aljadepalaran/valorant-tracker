@@ -1,6 +1,9 @@
 import PySimpleGUI as sg
 import requests as rq
 import time
+import json
+
+from peewee import *
 from models.user import User
 from profile_view import profile_view
 from matches import matches_view
@@ -10,6 +13,7 @@ layout_three = [[sg.Text('Hello world 3')]]
 tab_group = [
     [[sg.Text("Name"), sg.Input(key='-NAME-')],
      [sg.Text("Tag"), sg.Input(key='-TAG-')],
+     [sg.Button('Search', pad=(250, 50))],
      sg.TabGroup(
          [
              [
@@ -49,23 +53,55 @@ def fetch_user_data_from_api(name_, tag_):
     return None
 
 
-def check_puuid(user_puuid):
-    if User.get(User.puuid == user_puuid) is None:
-        return False
-    else:
+def check_puuid(parsed_user_data_):
+    try:
+        User.get(User.puuid == parsed_user_data_['puuid'])
+        print('User exists')
         return True
+    except:
+        return False
 
 
-def update_user(user):
-    return None
+def update_user(parsed_user_data_):
+    try:
+        # set the updated values
+        user_from_puuid = User.get(User.puuid == parsed_user_data_['puuid'])
+        user_from_puuid.region = parsed_user_data_['region'],
+        user_from_puuid.account_level = parsed_user_data_['account_level'],
+        user_from_puuid.image_small_url = parsed_user_data_['card']['small'],
+        user_from_puuid.image_large_url = parsed_user_data_['card']['large'],
+        user_from_puuid.image_wide_url = parsed_user_data_['card']['wide'],
+        user_from_puuid.name = parsed_user_data_['name'],
+        user_from_puuid.tag = parsed_user_data_['tag'],
+
+        user_from_puuid.save()  # save the user
+    except:
+        print('Something really wrong happened')
 
 
 def display_data():
     return None
 
 
-def add_user_to_database(user):
-    return None
+def add_user_to_database(parsed_user_data_):
+    try:
+        User.create(puuid=parsed_user_data_['puuid'],
+                    region=parsed_user_data_['region'],
+                    account_level=parsed_user_data_['account_level'],
+                    image_small_url=parsed_user_data_['card']['small'],
+                    image_large_url=parsed_user_data_['card']['large'],
+                    image_wide_url=parsed_user_data_['card']['wide'],
+                    name=parsed_user_data_['name'],
+                    tag=parsed_user_data_['tag'],
+                    time_last_updated_unix=time.time())
+    except IntegrityError:  # this error indicates the username is already in the database
+        print('Username has already been used.')
+
+
+def parse_user_api_data(user_api_data_):
+    parsed_data = json.loads(user_api_data_.content)['data']
+    print(parsed_data)
+    return parsed_data
 
 
 while True:
@@ -75,14 +111,15 @@ while True:
     elif event == 'Search':
         username = values['-NAME-']
         usertag = values['-TAG-']
-        user = get_user_from_database()  # attempt to retrieve user from database
+        user = get_user_from_database(username, usertag)  # attempt to retrieve user from database
         if user is None:  # if user not in database, get from API
-            user_api = fetch_user_data_from_api(username, usertag)
-            if check_puuid(user_api):  # check if puuid already exists in database
-                update_user(user_api)
+            user_api_data = fetch_user_data_from_api(username, usertag)
+            parsed_user_data = parse_user_api_data(user_api_data)
+            if check_puuid(parsed_user_data):  # check if puuid already exists in database
+                update_user(parsed_user_data)
                 display_data()
             else:
-                add_user_to_database(user)
+                add_user_to_database(parsed_user_data)
         else:
             should_update = User.should_update_from_api()
             if should_update:

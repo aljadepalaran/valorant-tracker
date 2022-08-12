@@ -122,6 +122,14 @@ def parse_user_api_data(user_api_data_):
     return parsed_data
 
 
+def get_match_data(user):
+    pass
+
+
+def display_match_data(user):
+    pass
+
+
 while True:
     event, values = window.read()
 
@@ -157,5 +165,22 @@ while True:
                 parsed_user_data = parse_user_api_data(user_api_data)
                 update_user(parsed_user_data)
 
+            get_match_data(user)
+            display_match_data(user)
             display_data(user)
             print("here2")
+
+
+def fetch_last_5_matches(name_, tag_):
+    request_url = f"https://api.henrikdev.xyz/valorant/v3/matches/eu/{name_}/{tag_}?filter=competitive"
+    Debug.log(f"#fetch_last_5_matches {request_url}")
+    try:
+        time_then = time.time()
+        match_data = rq.get(request_url, timeout=1)
+        time_now = time.time()
+        Debug.log(f"Time taken for request= {round(time_now - time_then, 2)}s.")
+        Debug.log(f"#match_data {match_data}")
+        return match_data
+    except rq.exceptions.ReadTimeout:  # has the connection timed out?
+        Debug.log('Connection timed out.')
+        sg.Popup("Connection timed out.")  # inform user the connection timed out

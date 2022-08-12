@@ -32,6 +32,7 @@ window = sg.Window('Test', tab_group)
 
 
 def get_user_from_database(name_, tag_):
+    Debug.log(f"#get_user_from_database, name:{name_}, tag:{tag_}")
     try:
         return User.get(User.name == name_ and User.tag == tag_)
     except:
@@ -40,6 +41,7 @@ def get_user_from_database(name_, tag_):
 
 
 def fetch_user_data_from_api(name_, tag_):
+    Debug.log(f"#fetch_user_data_from_api, name:{name_}, tag:{tag_}")
     request_url = f"https://api.henrikdev.xyz/valorant/v1/account/{name_}/{tag_}"
     Debug.log(f"(HTTP Request)GET {request_url}")
     try:
@@ -55,6 +57,7 @@ def fetch_user_data_from_api(name_, tag_):
 
 
 def check_puuid(parsed_user_data_):
+    Debug.log(f"#check_puuid, data:{parsed_user_data_}")
     try:
         User.get(User.puuid == parsed_user_data_['puuid'])
         Debug.log("#check_puuid User already exists")
@@ -64,6 +67,7 @@ def check_puuid(parsed_user_data_):
 
 
 def update_user(parsed_user_data_):
+    Debug.log(f"#update_user, data: {parsed_user_data_}")
     try:
         # set the updated values
         user_from_puuid = User.get(User.puuid == parsed_user_data_['puuid'])
@@ -76,6 +80,7 @@ def update_user(parsed_user_data_):
         user_from_puuid.tag = parsed_user_data_['tag'],
 
         user_from_puuid.save()  # save the user
+        Debug.log(f"#update_user, User update successfully")
     except:
         Debug.log("Could not update the user")
 
@@ -128,7 +133,7 @@ while True:
                 add_user_to_database(parsed_user_data)
 
         else:
-            should_update = User.should_update_from_api()
+            should_update = user.should_update_from_api()
 
             if should_update:
                 user = fetch_user_data_from_api()

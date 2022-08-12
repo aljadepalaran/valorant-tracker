@@ -170,3 +170,12 @@ Time taken for request= 0.17s. @ Fri Aug 12 10:51:40 2022
 #update_user, data: {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': 'an hour ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:51:40 2022 
 #update_user, User update successfully @ Fri Aug 12 10:51:40 2022 
 #display_data2 @ Fri Aug 12 10:51:40 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:55:11 2022 
+#should_update_from_api, data: True @ Fri Aug 12 10:55:11 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:55:11 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:55:11 2022 
+Time taken for request= 0.22s. @ Fri Aug 12 10:55:11 2022 
+#parse_user_api_data | {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': 'an hour ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:55:11 2022 
+#update_user, data: {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': 'an hour ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:55:11 2022 
+#update_user, User update successfully @ Fri Aug 12 10:55:11 2022 
+#display_data2 @ Fri Aug 12 10:55:11 2022 

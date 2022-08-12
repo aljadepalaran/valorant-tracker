@@ -12,9 +12,9 @@ sg.theme('Dark')
 layout_three = [[sg.Text('Hello world 3')]]
 
 tab_group = [
-    [[sg.Text("Name"), sg.Input(key='-NAME-')],
-     [sg.Text("Tag"), sg.Input(key='-TAG-')],
-     [sg.Button('Search', pad=(250, 50))],
+    [[[sg.Text("Name"), sg.Input(key='-NAME-')],
+      [sg.Text("Tag "), sg.Input(key='-TAG-')]],
+     [sg.Button('Search', pad=(10, 10)), sg.Button('Exit')],
      sg.TabGroup(
          [
              [
@@ -23,8 +23,7 @@ tab_group = [
                  sg.Tab('Layout 3', layout_three, background_color='pink')
              ]
          ]
-     ),
-     sg.Button('Exit')
+     )
      ]
 ]
 

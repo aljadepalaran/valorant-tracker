@@ -8,7 +8,7 @@ from peewee import *
 from models.user import User
 from profile_view import profile_view
 from matches import matches_view
-
+sg.theme('Dark')
 layout_three = [[sg.Text('Hello world 3')]]
 
 tab_group = [
@@ -71,13 +71,13 @@ def update_user(parsed_user_data_):
     try:
         # set the updated values
         user_from_puuid = User.get(User.puuid == parsed_user_data_['puuid'])
-        user_from_puuid.region = parsed_user_data_['region'],
-        user_from_puuid.account_level = parsed_user_data_['account_level'],
-        user_from_puuid.image_small_url = parsed_user_data_['card']['small'],
-        user_from_puuid.image_large_url = parsed_user_data_['card']['large'],
-        user_from_puuid.image_wide_url = parsed_user_data_['card']['wide'],
-        user_from_puuid.name = parsed_user_data_['name'],
-        user_from_puuid.tag = parsed_user_data_['tag'],
+        user_from_puuid.region = parsed_user_data_['region']
+        user_from_puuid.account_level = parsed_user_data_['account_level']
+        user_from_puuid.image_small_url = parsed_user_data_['card']['small']
+        user_from_puuid.image_large_url = parsed_user_data_['card']['large']
+        user_from_puuid.image_wide_url = parsed_user_data_['card']['wide']
+        user_from_puuid.name = parsed_user_data_['name']
+        user_from_puuid.tag = parsed_user_data_['tag']
 
         user_from_puuid.save()  # save the user
         Debug.log(f"#update_user, User update successfully")
@@ -85,8 +85,20 @@ def update_user(parsed_user_data_):
         Debug.log("Could not update the user")
 
 
-def display_data():
-    return None
+def display_data(databaseuser):
+    Debug.log(f"#display_data{databaseuser}")
+    some_text = f"""
+        Puuid: {databaseuser.puuid}
+        Region: {databaseuser.region}
+        Name: {databaseuser.name}
+        Tag: {databaseuser.tag}
+        Account level: {databaseuser.account_level}
+        Image Small: {databaseuser.image_small_url}
+        Image Large: {databaseuser.image_large_url}
+        Image Wide: {databaseuser.image_wide_url}
+        Time of last update: {time.ctime(databaseuser.time_last_updated_unix)}
+        """
+    window['-PROFILE_MULTI-'].update(some_text)
 
 
 def add_user_to_database(parsed_user_data_):
@@ -100,6 +112,7 @@ def add_user_to_database(parsed_user_data_):
                     name=parsed_user_data_['name'],
                     tag=parsed_user_data_['tag'],
                     time_last_updated_unix=time.time())
+        Debug.log(f"#added user to database {parsed_user_data_}")
     except IntegrityError:  # this error indicates the username is already in the database
         Debug.log('Username has already been used.')
 
@@ -127,16 +140,23 @@ while True:
 
             if check_puuid(parsed_user_data):  # check if puuid already exists in database
                 update_user(parsed_user_data)
-                display_data()
+                user = get_user_from_database(username, usertag)
+                print("here1")
+                Debug.log(f"#updating the user info {user}")
+                display_data(user)
 
             else:
                 add_user_to_database(parsed_user_data)
+                user = get_user_from_database(username, usertag)
+                display_data(user)
 
         else:
             should_update = user.should_update_from_api()
 
             if should_update:
-                user = fetch_user_data_from_api()
-                update_user(user)
+                user_api_data = fetch_user_data_from_api(username, usertag)
+                parsed_user_data = parse_user_api_data(user_api_data)
+                update_user(parsed_user_data)
 
-            display_data()
+            display_data(user)
+            print("here2")

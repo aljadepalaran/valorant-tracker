@@ -1,0 +1,172 @@
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:16:47 2022 
+Unable to retrieve user from the database. @ Fri Aug 12 10:16:47 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:16:47 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:16:47 2022 
+Time taken for request= 0.22s. @ Fri Aug 12 10:16:48 2022 
+#parse_user_api_data | {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '17 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:16:48 2022 
+#check_puuid, data:{'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '17 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:16:48 2022 
+#check_puuid User already exists @ Fri Aug 12 10:16:48 2022 
+#update_user, data: {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '17 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:16:48 2022 
+#update_user, User update successfully @ Fri Aug 12 10:16:48 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:19:15 2022 
+Unable to retrieve user from the database. @ Fri Aug 12 10:19:15 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:19:15 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:19:15 2022 
+Time taken for request= 0.59s. @ Fri Aug 12 10:19:16 2022 
+#parse_user_api_data | {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '20 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:19:16 2022 
+#check_puuid, data:{'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '20 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:19:16 2022 
+#check_puuid User already exists @ Fri Aug 12 10:19:16 2022 
+#update_user, data: {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '20 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:19:16 2022 
+#update_user, User update successfully @ Fri Aug 12 10:19:16 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:19:33 2022 
+Unable to retrieve user from the database. @ Fri Aug 12 10:19:33 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:19:33 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:19:33 2022 
+Time taken for request= 0.34s. @ Fri Aug 12 10:19:33 2022 
+#parse_user_api_data | {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '20 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:19:33 2022 
+#check_puuid, data:{'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '20 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:19:33 2022 
+#check_puuid User already exists @ Fri Aug 12 10:19:33 2022 
+#update_user, data: {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '20 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:19:33 2022 
+#update_user, User update successfully @ Fri Aug 12 10:19:34 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:19:54 2022 
+Unable to retrieve user from the database. @ Fri Aug 12 10:19:54 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:19:54 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:19:54 2022 
+Time taken for request= 0.2s. @ Fri Aug 12 10:19:55 2022 
+#parse_user_api_data | {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '20 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:19:55 2022 
+#check_puuid, data:{'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '20 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:19:55 2022 
+#check_puuid User already exists @ Fri Aug 12 10:19:55 2022 
+#update_user, data: {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '20 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:19:55 2022 
+#update_user, User update successfully @ Fri Aug 12 10:19:55 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:28:58 2022 
+Unable to retrieve user from the database. @ Fri Aug 12 10:28:58 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:28:58 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:28:58 2022 
+Time taken for request= 0.3s. @ Fri Aug 12 10:28:58 2022 
+#parse_user_api_data | {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '29 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:28:58 2022 
+#check_puuid, data:{'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '29 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:28:58 2022 
+#check_puuid User already exists @ Fri Aug 12 10:28:58 2022 
+#update_user, data: {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '29 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:28:58 2022 
+#update_user, User update successfully @ Fri Aug 12 10:28:58 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:28:58 2022 
+Unable to retrieve user from the database. @ Fri Aug 12 10:28:58 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:31:02 2022 
+Unable to retrieve user from the database. @ Fri Aug 12 10:31:02 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:31:02 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:31:02 2022 
+Time taken for request= 0.58s. @ Fri Aug 12 10:31:02 2022 
+#parse_user_api_data | {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '31 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:31:02 2022 
+#check_puuid, data:{'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '31 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:31:02 2022 
+#check_puuid User already exists @ Fri Aug 12 10:31:02 2022 
+#update_user, data: {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '31 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:31:02 2022 
+#update_user, User update successfully @ Fri Aug 12 10:31:02 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:31:02 2022 
+Unable to retrieve user from the database. @ Fri Aug 12 10:31:02 2022 
+#display_dataNone @ Fri Aug 12 10:31:02 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:33:15 2022 
+Unable to retrieve user from the database. @ Fri Aug 12 10:33:15 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:33:15 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:33:15 2022 
+Time taken for request= 0.43s. @ Fri Aug 12 10:33:15 2022 
+#parse_user_api_data | {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '34 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:33:15 2022 
+#check_puuid, data:{'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '34 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:33:15 2022 
+#check_puuid User already exists @ Fri Aug 12 10:33:15 2022 
+#update_user, data: {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '34 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:33:15 2022 
+#update_user, User update successfully @ Fri Aug 12 10:33:15 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:33:15 2022 
+Unable to retrieve user from the database. @ Fri Aug 12 10:33:15 2022 
+#display_dataNone @ Fri Aug 12 10:33:15 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:36:11 2022 
+Unable to retrieve user from the database. @ Fri Aug 12 10:36:11 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:36:11 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:36:11 2022 
+Time taken for request= 1.03s. @ Fri Aug 12 10:36:12 2022 
+#parse_user_api_data | {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '37 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:36:12 2022 
+#check_puuid, data:{'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '37 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:36:12 2022 
+#check_puuid User already exists @ Fri Aug 12 10:36:12 2022 
+#update_user, data: {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '37 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:36:12 2022 
+#update_user, User update successfully @ Fri Aug 12 10:36:12 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:36:12 2022 
+Unable to retrieve user from the database. @ Fri Aug 12 10:36:12 2022 
+# a check thing None @ Fri Aug 12 10:36:12 2022 
+#display_dataNone @ Fri Aug 12 10:36:12 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:39:33 2022 
+Unable to retrieve user from the database. @ Fri Aug 12 10:39:33 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:39:33 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:39:33 2022 
+Time taken for request= 0.16s. @ Fri Aug 12 10:39:34 2022 
+#parse_user_api_data | {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '40 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:39:34 2022 
+#check_puuid, data:{'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '40 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:39:34 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:39:42 2022 
+#should_update_from_api, data: False @ Fri Aug 12 10:39:42 2022 
+#display_data2 @ Fri Aug 12 10:39:42 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:41:46 2022 
+#should_update_from_api, data: False @ Fri Aug 12 10:41:46 2022 
+#display_data2 @ Fri Aug 12 10:41:46 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:42:05 2022 
+Unable to retrieve user from the database. @ Fri Aug 12 10:42:05 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:42:05 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:42:05 2022 
+Time taken for request= 0.54s. @ Fri Aug 12 10:42:05 2022 
+#parse_user_api_data | {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '42 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:42:05 2022 
+#check_puuid, data:{'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '42 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:42:05 2022 
+#added user to database {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': '42 minutes ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:42:06 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:42:06 2022 
+#display_data2 @ Fri Aug 12 10:42:06 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:45:44 2022 
+#should_update_from_api, data: False @ Fri Aug 12 10:45:44 2022 
+#display_data2 @ Fri Aug 12 10:45:44 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:45:55 2022 
+#should_update_from_api, data: False @ Fri Aug 12 10:45:55 2022 
+#display_data2 @ Fri Aug 12 10:45:55 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:46:01 2022 
+#should_update_from_api, data: False @ Fri Aug 12 10:46:01 2022 
+#display_data2 @ Fri Aug 12 10:46:01 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:46:26 2022 
+#should_update_from_api, data: False @ Fri Aug 12 10:46:26 2022 
+#display_data2 @ Fri Aug 12 10:46:26 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:46:32 2022 
+#should_update_from_api, data: False @ Fri Aug 12 10:46:32 2022 
+#display_data2 @ Fri Aug 12 10:46:32 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:46:34 2022 
+#should_update_from_api, data: False @ Fri Aug 12 10:46:34 2022 
+#display_data2 @ Fri Aug 12 10:46:34 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:47:48 2022 
+#should_update_from_api, data: True @ Fri Aug 12 10:47:48 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:48:03 2022 
+#should_update_from_api, data: True @ Fri Aug 12 10:48:03 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:48:39 2022 
+#should_update_from_api, data: True @ Fri Aug 12 10:48:39 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:48:39 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:48:39 2022 
+Time taken for request= 0.37s. @ Fri Aug 12 10:48:39 2022 
+#update_user, data: <Response [200]> @ Fri Aug 12 10:48:39 2022 
+Could not update the user @ Fri Aug 12 10:48:39 2022 
+#display_data<Response [200]> @ Fri Aug 12 10:48:39 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:49:09 2022 
+#should_update_from_api, data: True @ Fri Aug 12 10:49:09 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:49:09 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:49:09 2022 
+Time taken for request= 0.24s. @ Fri Aug 12 10:49:10 2022 
+#parse_user_api_data | {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': 'an hour ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:49:10 2022 
+#update_user, data: 2 @ Fri Aug 12 10:49:10 2022 
+Could not update the user @ Fri Aug 12 10:49:10 2022 
+#display_data2 @ Fri Aug 12 10:49:10 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:50:05 2022 
+#should_update_from_api, data: True @ Fri Aug 12 10:50:05 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:50:05 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:50:05 2022 
+Time taken for request= 0.87s. @ Fri Aug 12 10:50:05 2022 
+#parse_user_api_data | {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': 'an hour ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:50:05 2022 
+#update_user, data: 2 @ Fri Aug 12 10:50:05 2022 
+Could not update the user @ Fri Aug 12 10:50:05 2022 
+#display_data2 @ Fri Aug 12 10:50:05 2022 
+#get_user_from_database, name:c00k1e, tag:8878 @ Fri Aug 12 10:51:39 2022 
+#should_update_from_api, data: True @ Fri Aug 12 10:51:39 2022 
+#fetch_user_data_from_api, name:c00k1e, tag:8878 @ Fri Aug 12 10:51:39 2022 
+(HTTP Request)GET https://api.henrikdev.xyz/valorant/v1/account/c00k1e/8878 @ Fri Aug 12 10:51:39 2022 
+Time taken for request= 0.17s. @ Fri Aug 12 10:51:40 2022 
+#parse_user_api_data | {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': 'an hour ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:51:40 2022 
+#update_user, data: {'puuid': '83915807-43c3-52af-8c2f-53988291e490', 'region': 'eu', 'account_level': 71, 'name': 'c00k1e', 'tag': '8878', 'card': {'small': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/smallart.png', 'large': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/largeart.png', 'wide': 'https://media.valorant-api.com/playercards/9fb348bc-41a0-91ad-8a3e-818035c4e561/wideart.png', 'id': '9fb348bc-41a0-91ad-8a3e-818035c4e561'}, 'last_update': 'an hour ago', 'last_update_raw': 1660294780} @ Fri Aug 12 10:51:40 2022 
+#update_user, User update successfully @ Fri Aug 12 10:51:40 2022 
+#display_data2 @ Fri Aug 12 10:51:40 2022 

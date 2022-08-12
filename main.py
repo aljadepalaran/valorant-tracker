@@ -2,6 +2,7 @@ import PySimpleGUI as sg
 import requests as rq
 import time
 import json
+import Debug
 
 from peewee import *
 from models.user import User
@@ -34,21 +35,21 @@ def get_user_from_database(name_, tag_):
     try:
         return User.get(User.name == name_ and User.tag == tag_)
     except:
-        print("Unable to retrieve user from the database.")
+        Debug.log("Unable to retrieve user from the database.")
         return None
 
 
 def fetch_user_data_from_api(name_, tag_):
     request_url = f"https://api.henrikdev.xyz/valorant/v1/account/{name_}/{tag_}"
-    print(f"GET {request_url}")
+    Debug.log(f"(HTTP Request)GET {request_url}")
     try:
         time_then = time.time()
         user_data = rq.get(request_url, timeout=1)
         time_now = time.time()
-        print(f"Time taken for request= {round(time_now - time_then, 2)}s.")
+        Debug.log(f"Time taken for request= {round(time_now - time_then, 2)}s.")
         return user_data
     except rq.exceptions.ReadTimeout:  # has the connection timed out?
-        print('Connection timed out.')
+        Debug.log('Connection timed out.')
         sg.Popup("Connection timed out.")  # inform user the connection timed out
     return None
 
@@ -56,7 +57,7 @@ def fetch_user_data_from_api(name_, tag_):
 def check_puuid(parsed_user_data_):
     try:
         User.get(User.puuid == parsed_user_data_['puuid'])
-        print('User exists')
+        Debug.log("#check_puuid User already exists")
         return True
     except:
         return False
@@ -76,7 +77,7 @@ def update_user(parsed_user_data_):
 
         user_from_puuid.save()  # save the user
     except:
-        print('Something really wrong happened')
+        Debug.log("Could not update the user")
 
 
 def display_data():
@@ -95,34 +96,42 @@ def add_user_to_database(parsed_user_data_):
                     tag=parsed_user_data_['tag'],
                     time_last_updated_unix=time.time())
     except IntegrityError:  # this error indicates the username is already in the database
-        print('Username has already been used.')
+        Debug.log('Username has already been used.')
 
 
 def parse_user_api_data(user_api_data_):
     parsed_data = json.loads(user_api_data_.content)['data']
-    print(parsed_data)
+    Debug.log(f"#parse_user_api_data | {parsed_data}")
     return parsed_data
 
 
 while True:
     event, values = window.read()
+
     if event == 'Exit' or event == sg.WINDOW_CLOSED:
         break
+
     elif event == 'Search':
         username = values['-NAME-']
         usertag = values['-TAG-']
         user = get_user_from_database(username, usertag)  # attempt to retrieve user from database
+
         if user is None:  # if user not in database, get from API
             user_api_data = fetch_user_data_from_api(username, usertag)
             parsed_user_data = parse_user_api_data(user_api_data)
+
             if check_puuid(parsed_user_data):  # check if puuid already exists in database
                 update_user(parsed_user_data)
                 display_data()
+
             else:
                 add_user_to_database(parsed_user_data)
+
         else:
             should_update = User.should_update_from_api()
+
             if should_update:
                 user = fetch_user_data_from_api()
                 update_user(user)
+
             display_data()

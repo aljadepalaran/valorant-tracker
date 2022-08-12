@@ -58,6 +58,8 @@ while True:
     if event == 'Exit' or event == sg.WINDOW_CLOSED:
         break
     elif event == 'Search':
+        username = values['-NAME-']
+        usertag = values['-TAG-']
         user = get_user_from_database()
         if user is None:
             user = fetch_user_data_from_api()
